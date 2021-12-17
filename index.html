@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spell SMS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c542f6ceea.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="//db.onlinewebfonts.com/c/41d92fd78c10238a92a7d24a74968f36?family=TESLA" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body onload="myFunction()">
+  <div id="loading" class=" w-screen h-screen bg-gray-800 fixed z-50 flex flex-col items-center justify-center">
+    <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_szlepvdh.json"  background="transparent"  speed="1.5"  style="width: 250px; height: 220px;"  loop  autoplay></lottie-player>
+    <!-- <h1 class="text-gray-400 text-2xl">Spell SMS</h1> -->
+  </div>
+  <nav class="bg-opacity-5 shadow-lg">
+    <div class="container  px-5 lg:px-6 mx-auto">
+      <div class="flex justify-between">
+        <div class="flex space-x-7">
+          <div>
+            <!-- Website Logo -->
+            <a href="index.html" class="flex items-center py-2 px-2">
+              <img src="./images/logo.png" alt="Logo" class=" w-12 sm:w-16 mr-6">
+              <h1 class=" text-primary text-xl sm:text-2xl  font-body uppercase">Spell <span class=" text-secondary font-body uppercase text-xl sm:text-2xl ">SMS</span></h1>
+            </a>
+          </div>
+          <!-- Primary Navbar items -->
+          <div class="hidden md:flex items-center space-x-1">
+            <!-- <a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</a>
+            <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Services</a>
+            <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</a>
+            <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact Us</a> -->
+          </div>
+        </div>
+        <!-- Secondary Navbar items -->
+        <div class="hidden xl:flex items-center space-x-4 ">
+          <!-- <a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Log In</a> -->
+          <a href="index.html" class="py-4 px-2 text-secondary border-b-4 border-secondary font-semibold ">Home</a>
+          <a href="#servicesection" class="py-4 px-2 text-gray-500 font-semibold hover:text-secondary transition duration-300">Services</a>
+          <!--  -->
+          <a href="reseller.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-secondary transition duration-300">Reseller</a>
+          <a href="about.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-secondary transition duration-300">About</a>
+          <a href="#contactSection" class="py-4 px-2 text-gray-500 font-semibold hover:text-secondary transition duration-300">Contact</a>
+          
+          <a href="login.html" class="py-2 px-4 font-medium text-white bg-blue-900 rounded hover:bg-blue-700 transition duration-300"><i class="fas fa-user mr-3"></i>Log In</a>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="xl:hidden flex items-center">
+          <button class="outline-none mobile-menu-button">
+          <svg class=" w-6 h-6 text-gray-500 hover:text-secondary "
+            x-show="!showMenu"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="hidden mobile-menu">
+      <ul class="">
+        <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text- hover:bg-secondary">Home</a></li>
+        <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
+        <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
+        <li><a href="#contactSection"  class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
+        <li class="active"><a href="login.html" class="block text-sm px-2 py-4 text- hover:bg-secondary font-semibold">login</a></li>
+      </ul>
+    </div>
+
+    <script>
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </nav>
+  
+      <section class="hidden sm:block" style="background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(212,87,39,1) 0%, rgba(147,39,143,1) 100%);
+      ">
+        <div class="container  px-5 lg:px-6 mx-auto h-screen flex items-center">
+          <div class="w-1/2  py-8">
+             <span class="animate-pulse text-xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-6xl text-white bg-opacity-10">Reach more customer with faster<br> and reliable SMS <br> Messaging</span>
+              <div class="py-10">
+                <button class="animate-bounce py-2 px-10 bg-primary hover:bg-footerlink rounded-sm text-white md:py-3 2xl:py-4 2xl:text-xl" onclick="location.href='login.html'" >Get started</button>
+              </div>
+          </div>
+          <div class="w-1/2  py-8">
+              <div class="flex justify-end items-end ">
+                <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_ovxito1m.json"  background="transparent"  speed="1"  style="width: 290px; height: 290px;" class="2xl:w-auto py-2 pb-14"  loop  autoplay></lottie-player>
+                <!-- <h1>hello</h1> -->
+              </div>
+               <!-- <img src="./images/Hero illustration.png" alt="" class=" w-1/2"> -->
+               <!-- <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_uvtxv7tq.json"  background="transparent"  speed="0.5"  style="width: 290px; height: 290px;" class="2xl:w-auto"   loop  autoplay></lottie-player> -->
+
+          </div>
+        </div>
+      </section>
+
+      <section class="sm:hidden h-" style="background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(212,87,39,1) 0%, rgba(147,39,143,1) 100%);
+      ">
+        <div class="container px-5 lg:px-8 mx-auto h-4/5 flex items-center">
+          <div class="w-full flex flex-col justify-center items-center ">
+            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_uvtxv7tq.json"  background="transparent"  speed="0.5"  style="width: 220px; height: 220px;" class="mb-4 px-6" loop  autoplay></lottie-player>
+             <span class="animate-pulse text-2xl sm:text-2xl md:text-3xl xl:text-4xl text-white bg-opacity-10 text-center mb-6">Reach more customer with faster and reliable SMS  Messaging</span>
+              <div class=" flex justify-center">
+                <button class="animate-bounce py-2 px-10 bg-primary hover:bg-footerlink rounded-sm text-white mb-6">Get started</button>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-gray-200 ">
+        <div class="container  px-5 lg:px-6 py-6 mx-auto  ">
+          <h1 class="text-3xl font-semibold text-secondary text-center mb-1 wow animate__animated animate__zoomInDown font-heading">Why Spell SMS?</h1>
+          <p class=" text-center text-lg wow animate__animated animate__zoomInDown font-paragraph ">We are about quality and trust</p>
+          <div  class="py-4 wow animate__animated animate__zoomInDown">
+            <div class="flex flex-wrap -m-4 ">
+              <div class="xl:w-1/5 md:w-1/3 sm:w-1/2 w-full py-4  ">
+                <div class="flex flex-col items-center sm:items-start">
+                  <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_zwdkqu8y.json"  background="transparent"  speed="0.8"  style="width: 180px; height: 180px;"  hover autoplay loop ></lottie-player >
+                  <h1 class="text-2xl text-center sm:pl-6">Best Support</h1>
+                </div>
+              </div>
+              <div class="xl:w-1/5 md:w-1/3  sm:w-1/2 w-full py-4">
+                <div class="flex flex-col items-center sm:items-start ">
+                 
+                  <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_oxurudgk.json"  background="transparent"  speed="1"  style="width: 180px; height: 180px;" class="pt-2" hover   autoplay loop></lottie-player>
+                  <div class=" text-center">
+                    
+                    <h1 class="text-2xl text-center sm:pl-6">Fast Delivery</h1>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="xl:w-1/5 md:w-1/3  sm:w-1/2 w-full py-4">
+                <div class="flex flex-col items-center sm:items-start ">
+                  <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_napjdujz.json"  background="transparent"  speed="1"  style="width: 180px; height: 180px;" autoplay hover loop ></lottie-player>
+
+                  <div class=" text-center">
+                    <h1 class="text-2xl text-center sm:pl-6">Best Pricing</h1>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="xl:w-1/5 md:w-1/3  sm:w-1/2 w-full py-4">
+                <div class="flex flex-col items-center sm:items-start">
+                  <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_ne4hjbe3.json" background="transparent"  speed="1"  style="width: 180px; height: 180px;" autoplay hover loop class="px-3" ></lottie-player>
+                  <div class=" text-center">
+                    <h1 class="text-2xl text-center sm:pl-6">Multi-platform </h1>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="xl:w-1/5 md:w-1/3  sm:w-1/2 w-full py-4">
+                <div class="flex flex-col items-center sm:items-start">
+                  <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_bq0iyadj.json"  background="transparent"  speed="1"  style="width: 180px; height: 180px;" autoplay hover loop   ></lottie-player>
+                  <div class=" text-center ">
+                    <h1 class="text-2xl text-center sm:pl-4">100% Data Secure</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
+
+       <!-- blog -->
+       <section class="text-gray-800 body-font bg-gray-100" id="servicesection">
+        <div class="container  px-5 lg:px-6  py-6  mx-auto border-b border-gray-400">
+          <div class="text-center text-3xl text-secondary font-semibold  wow animate__animated animate__zoomIn">
+            <span class="font-heading">Services</span>
+          </div>
+          <div class="text-center mb-4 wow animate__animated animate__zoomIn font-paragraph ">
+            <span>As a Bulk SMS Company We Provide Enterprise Messaging Solution</span>
+          </div>
+          <div class="mt-6 flex flex-wrap -m-4 wow animate__animated animate__zoomIn">
+            <div class="p-4 md:w-1/2 lg:w-1/3 cursor-pointer group" onclick="location.href='services.html'" >
+              <div class="p-4 bg-white hover:bg-tertiary hover:text-white transform transition duration-500  border-opacity-60 rounded-lg flex flex-col items-center overflow-hidden">
+                <div class="w-20 h-20 md:h-24 md:w-24 lg:h-28 lg:w-28 2xl:h-32  2xl:w-32 border  rounded-full  flex items-center justify-center" style="background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(212,87,39,1) 0%, rgba(147,39,143,1) 100%);">
+                <img class="p-2" src="./images/sms.png" alt="blog">
+                </div>
+                <div class="mt-4 pb-0 px-2 xl:px-4">
+                  <h1 class="title-font text-2xl font-medium text-center mb-3">Bulk SMS</h1>
+                  <p class="leading-relaxed font-small mb-3 text-center md:text-justify ">Bulk refers to the distribution of a large number of SMS messages to cell phone terminals. It is frequently used for warnings, reminders ...</p>
+                  <div class=" text-center">
+                    <a class=" inline-flex items-center md:mb-2 lg:mb-0 group-hover:text-secondary  text-primary">Read More
+                      <i class="fas fa-arrow-right mx-4"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/2 lg:w-1/3 cursor-pointer group" onclick="location.href='/public/services.html'" >
+              <div class="p-4   bg-white hover:bg-tertiary hover:text-white transform transition duration-500  border-opacity-60 rounded-lg flex flex-col items-center overflow-hidden border-b border-gray-400">
+                <div class="w-20 h-20 md:h-24 md:w-24 lg:h-28 lg:w-28 2xl:h-32  2xl:w-32 border  rounded-full  flex items-center justify-center" style="background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(212,87,39,1) 0%, rgba(147,39,143,1) 100%);">
+                  <img class="p-2" src="./images/mms.png" alt="blog">
+                </div>
+                <div class="mt-4 pb-0 px-2 xl:px-4">
+                  <h1 class="title-font text-2xl font-medium text-center  mb-3 ">Bulk MMS</h1>
+                  <p class="leading-relaxed font-small mb-3 text-center md:text-justify">Multimedia Messaging Service (MMS) is a standard way to send messages that include multimedia content to a mobile phone.</p>
+                  <div class=" text-center">
+                    <a class=" inline-flex items-center md:mb-2 lg:mb-0 group-hover:text-secondary  text-primary">Read More
+                      <i class="fas fa-arrow-right mx-4"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/2 lg:w-1/3 cursor-pointer group" onclick="location.href='services.html'" >
+              <div class="p-4   bg-white hover:bg-tertiary hover:text-white transform transition duration-500  border-opacity-60 rounded-lg flex flex-col items-center overflow-hidden border-b border-gray-400">
+                <div class="w-20 h-20 md:h-24 md:w-24 lg:h-28 lg:w-28 2xl:h-32  2xl:w-32 border  rounded-full  flex items-center justify-center" style="background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(212,87,39,1) 0%, rgba(147,39,143,1) 100%);">
+                  <img class="p-3" src="./images/api.png" alt="blog">
+                  </div>
+                <div class="mt-4 pb-0 px-2 xl:px-4">
+                  <h1 class="title-font text-2xl font-medium text-center mb-3">SMS Gateway API
+                  </h1>
+                  <p class="leading-relaxed font-small mb-3 text-center md:text-justify ">API stands for Application Programming Interface, and it specifies how various software intermediaries communicate with one another.</p>
+                  <div class=" text-center">
+                    <a class=" inline-flex items-center md:mb-2 lg:mb-0 group-hover:text-secondary   text-primary">Read More
+                      <i class="fas fa-arrow-right mx-4"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 flex flex-wrap -m-4 wow animate__animated animate__zoomIn ">
+            <div class="p-4 md:w-1/2 lg:w-1/3 cursor-pointer group" onclick="location.href='/public/services.html'" >
+              <div class="p-4  bg-white hover:bg-tertiary hover:text-white transform transition duration-500  border-opacity-60 rounded-lg flex flex-col items-center overflow-hidden border-b border-gray-400">
+                <div class="w-20 h-20 md:h-24 md:w-24 lg:h-28 lg:w-28 2xl:h-32  2xl:w-32 border  rounded-full  flex items-center justify-center" style="background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(212,87,39,1) 0%, rgba(147,39,143,1) 100%);">
+                  <img class="p-3" src="./images/voting.png" alt="blog">
+                  </div>
+                <div class="mt-4 pb-0 px-2 xl:px-4">
+                  <h1 class="title-font text-2xl font-medium text-center  mb-3">SMS Voting</h1>
+                  <p class="leading-relaxed font-small mb-3 text-center md:text-justify ">SMS Voting Service (SMS Poll) is the simplest and fastest way to find out what your audience is thinking. It is used to start opinion polls</p>
+                  <div class=" text-center">
+                    <a class=" inline-flex items-center md:mb-2 lg:mb-0 group-hover:text-secondary   text-primary">Read More
+                      <i class="fas fa-arrow-right mx-4"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/2 lg:w-1/3 cursor-pointer group" onclick="location.href='services.html'" >
+              <div class="p-4  bg-white hover:bg-tertiary hover:text-white transform transition duration-500  border-opacity-60 rounded-lg flex flex-col items-center overflow-hidden border-b border-gray-400">
+                <div class="w-20 h-20 md:h-24 md:w-24 lg:h-28 lg:w-28 2xl:h-32  2xl:w-32 border  rounded-full  flex items-center justify-center" style="background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(212,87,39,1) 0%, rgba(147,39,143,1) 100%);">
+                  <img class="p-3" src="./images/shortcodes.png" alt="blog">
+                  </div>
+                <div class="mt-4 pb-0 px-2 xl:px-4">
+                  <h1 class="title-font text-2xl font-medium text-center  mb-3 ">SMS Shortcodes</h1>
+                  <p class="leading-relaxed font-medium mb-3 text-center md:text-justify ">Short codes are five-digit numbers that are easy to remember, such as 95001. It's a versatile and simple method of sending and receiving SMS.</p>
+                  <div class=" text-center">
+                    <a class=" inline-flex items-center md:mb-2 lg:mb-0 group-hover:text-secondary   text-primary">Read More
+                      <i class="fas fa-arrow-right mx-4"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/2 lg:w-1/3 cursor-pointer group" onclick="location.href='services.html'" >
+              <div class="p-4  bg-white hover:bg-tertiary hover:text-white transform transition duration-500  border-opacity-60 rounded-lg flex flex-col items-center overflow-hidden border-b border-gray-400">
+                <div class="w-20 h-20 md:h-24 md:w-24 lg:h-28 lg:w-28 2xl:h-32  2xl:w-32 border  rounded-full  flex items-center justify-center" style="background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(212,87,39,1) 0%, rgba(147,39,143,1) 100%);">
+                  <img class="p-3" src="./images/voice.png" alt="blog">
+                  </div>
+                <div class="mt-4 pb-0 px-2 xl:px-4">
+                  <h1 class="title-font text-2xl font-medium text-center  mb-3 ">Voice SMS</h1>
+                  <p class="leading-relaxed font-small mb-3 text-center md:text-justify">Voice SMS is an automated call that contains a recorded message. You can either record the message or utilise a text to speech converter.</p>
+                  <div class=" text-center">
+                    <a class=" inline-flex items-center md:mb-2 lg:mb-0 group-hover:text-secondary   text-primary">Read More
+                      <i class="fas fa-arrow-right mx-4"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </section>
+
+      <section class="text-gray-800 body-font"  style="background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(212,87,39,1) 0%, rgba(147,39,143,1) 100%);">
+        <div class="container  px-5 lg:px-6  py-6 mx-auto text-lg border-b border-gray-400">
+          <h1 class=" text-center text-3xl font-semibold text-white mb-6 wow animate__animated animate__zoomIn font-heading">Features</h1>
+          
+          <div class="flex flex-wrap  text-left  bg-gray-200  rounded-lg ">
+            <div class="pl-6 py-10 lg:w-1/2 w-full order-2  lg:order-1 pr-6 lg:pr-0 wow animate__animated animate__backInLeft">
+              <div class="flex">
+                <div>
+                <span class="  text-primary mr-3 overflow-hidden"><i class="far fa-hand-point-right"></i>
+                </span> 
+                </div>
+                <div>
+                <h1 class="mb-6 text-lg ">System allows for easy import of number lists.</h1> 
+                </div>
+              </div>
+              <div class="flex">
+                <div>
+                <span class=" text-primary mr-3 overflow-hidden"><i class="far fa-hand-point-right"></i>
+                </span> 
+                </div>
+                <div>
+                <!-- <h1 class="mb-6 text-lg ">Advanced number management like contacts group.</h1>  -->
+                <h1 class="mb-6 text-lg ">Full sent report under SMS history, Delivery Report.
+                </h1> 
+                </div>
+              </div>
+              <div class="flex">
+                <div>
+                <span class=" text-primary mr-3 overflow-hidden"><i class="far fa-hand-point-right"></i>
+                </span> 
+                </div>
+                <div>
+                  <!-- <h1 class="mb-6 text-lg "> SMS scheduling - prepare SMS's but send at a later date.</h1>  -->
+                <h1 class="mb-6 text-lg ">Advanced number management like contacts group.</h1> 
+                </div>
+              </div>
+              <div class="flex">
+                <div>
+                <span class=" text-primary mr-3 overflow-hidden"><i class="far fa-hand-point-right"></i>
+                </span> 
+                </div>
+                <div>
+                
+                <h1 class="mb-6 text-lg "> SMS scheduling - prepare SMS's but send at a later date.</h1> 
+                </div>
+              </div>
+              <div class="flex">
+                <div>
+                <span class=" text-primary mr-3 overflow-hidden"><i class="far fa-hand-point-right"></i>
+                </span> 
+                </div>
+                <div>
+                <h1 class="mb-6 text-lg "> Easy to use online desktop application and mobile phone.
+                </h1> 
+                </div>
+              </div>
+              <div class="flex ">
+                <div>
+                <span class="text-primary mr-3 overflow-hidden"><i class="far fa-hand-point-right"></i>
+                </span> 
+                </div>
+                <div>
+                <h1 class="mb-6 text-lg "> Get Company Name its Sender ID. For Example: SPELL_Alert.</h1> 
+                </div>
+              </div>
+              <div class="flex ">
+                <div>
+                <span class=" text-primary mr-3 overflow-hidden"><i class="far fa-hand-point-right"></i>
+                </span> 
+                </div>
+                <div>
+                  <h1 class="mb-6 text-lg ">Send messages from your personal pc or mobile phone at home.</h1> 
+                </div>
+              </div>
+              <div class="flex">
+                <div>
+                <span class="text-primary mr-3 overflow-hidden"><i class="far fa-hand-point-right"></i>
+                </span> 
+                </div>
+                <div>
+                <h1 class=" text-lg "> Effective method of direct communication on all mobile networks.</h1> 
+                </div>
+              </div>
+            </div>
+            <div class=" w-full lg:w-1/2  flex  justify-center lg:justify-end pr-6 order-1  lg:order-2 wow animate__animated animate__backInRight">
+              <div>
+              <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_CjbLdC.json"  background="transparent"  speed="1"  style="width: 300px; height: 400px;"  loop  autoplay></lottie-player>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </section>
+      
+      <section class="text-gray-800 body-font bg-gray-100">
+        <div class="container px-5 lg:px-6 py-6 mx-auto ">
+          <div class="text-center ">
+            <h1 class="text-3xl font-semibold text-secondary mb-6 wow  animate__animated animate__zoomIn font-heading">Who can use spell sms</h1>
+          </div>
+          <div class="flex flex-wrap -m-4 text-center wow animate__animated animate__zoomIn ">
+            <div class="p-4 xl:w-1/5 md:w-1/3  sm:w-1/2 w-full">
+              <div class="border border-gray-600 px-4 py-6 rounded-lg   transform transition duration-500 hover:scale-105 bg-white hover:bg-tertiary hover:text-white group">
+                <div class=" flex justify-center">
+                 <img src="./svg/startup1.png" alt="startup icon" class="w-16 h-16  mb-2 inline-block">
+                </div>
+                <h2 class="title-font  text-2xl text-primary group-hover:text-white mb-2 font-heading">Startup</h2>
+                <div class="font-paragraph">
+                  <p class="leading-relaxed"> Bulk sms</p>
+                <p class="leading-relaxed">Otp sms sms</p>
+                <p class="leading-relaxed">Promotion sms</p>
+                <p class="leading-relaxed">Multimedia sms</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/5 sm:w-1/2 md:w-1/3 w-full">
+              <div class="border border-gray-600 px-4 py-6 rounded-lg transform transition duration-300 hover:scale-105 bg-white  hover:bg-tertiary hover:text-white group">
+                <div class=" flex justify-center">
+                 <img src="./svg/devloper.png" alt="startup icon" class="w-16 h-16  mb-2 inline-bloc">
+                </div>
+                <h2 class="title-font  text-2xl text-primary mb-2 group-hover:text-white font-heading">Devloper</h2>
+                <div class="font-paragraph">
+                <p class="leading-relaxed">Sms via api</p>
+                <p class="leading-relaxed">Website integration</p>
+                <p class="leading-relaxed">Software based sms</p>
+                <p class="leading-relaxed">Notification/Alert sms</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/5 sm:w-1/2 md:w-1/3  w-full">
+              <div class="border border-gray-600  px-4 py-6 rounded-lg transform transition duration-500 hover:scale-105 bg-white  hover:bg-tertiary hover:text-white group">
+                <div class=" flex justify-center">
+                 <img src="./svg/education.png" alt="startup icon" class="w-16 h-16  mb-2 inline-block">
+                </div>
+                <div>
+                  <h2 class="title-font  text-2xl text-primary group-hover:text-white mb-2 font-heading">Education</h2>
+                  <div class="font-paragraph">
+                    <p class="leading-relaxed ">Result sms</p>
+                  <p class="leading-relaxed">Attendance sms</p>
+                  <p class="leading-relaxed">Activity/News sms</p>
+                  <p class="leading-relaxed">Academic record sms</p>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/5 md:w-1/3  sm:w-1/2 w-full">
+              <div class="border border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-105 bg-white  hover:bg-tertiary hover:text-white group">
+                <div class=" flex justify-center">
+                 <img src="./svg/corporate.png" alt="startup icon" class="w-16 h-16  mb-2 inline-block ">
+                </div>
+                <h2 class="title-font text-2xl text-primary group-hover:text-white mb-2 font-heading">Corporate</h2>
+                <div class="font-paragraph ">
+                <p class="leading-relaxed ">Bulk sms</p>
+                <p class="leading-relaxed">Otp sms sms</p>
+                <p class="leading-relaxed">Promotion sms</p>
+                <p class="leading-relaxed">Multimedia sms</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/5 md:w-1/3  sm:w-1/2 w-full">
+              <div class="border border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-105 bg-white  group-hover:text-white hover:text-white hover:bg-tertiary group">
+                <div class=" flex justify-center">
+                 <img src="./svg/organization.svg" alt="startup icon" class="w-16 h-16 mb-2 inline-block">
+                </div>
+                <h2 class="title-font  text-2xl text-primary group-hover:text-white  mb-2 font-heading">Organization</h2>
+                <div class="font-paragraph">
+                <p class="leading-relaxed">Bulk sms</p>
+                <p class="leading-relaxed">Otp sms sms</p>
+                <p class="leading-relaxed">Promotion sms</p>
+                <p class="leading-relaxed">Multimedia sms</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+      <!-- contact us section  -->
+      <section class="text-gray-800 body-font relative bg-gray-50" id="contactSection">
+        <div class=" container px-5 lg:px-6 py-6 mx-auto">
+          <div>
+            <div class="flex flex-col justify-center items-center text-center">
+              <h2 class="  text-3xl title-font  text-secondary mb-6 font-heading font-semibold">Contact US</h2>
+            </div>
+          </div>
+        <div class=" flex sm:flex-nowrap flex-wrap">
+          <div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+            <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5754585675154!2d85.33497931438446!3d27.699513432444466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19291015ade1%3A0xa655f212b3dce4a7!2sSpell%20Innovation!5e0!3m2!1sen!2snp!4v1636877220510!5m2!1sen!2snp" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+            <div class="bg-gray-100 relative flex flex-wrap py-6 rounded shadow-md">
+              <div class="lg:w-1/2 px-6">
+                <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
+                <p class="mt-1">Baneshor, Kathmandu, Nepal</p>
+              </div>
+              <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+                <a class=" leading-relaxed">contact@spellsms.com</a>
+                <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+                <p class="leading-relaxed">+977-9823009044</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 md:w-1/2  flex flex-col md:ml-auto w-full  mt-8 md:mt-0">
+            <form  action="mail.php" method="post">
+            <div class="relative mb-4"> 
+               <label for="name" class="leading-7 text-sm text-gray-800">Name</label>
+              <input type="text" id="name "type="text" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            </div>
+            <div class="relative mb-4">
+              <label for="email" class="leading-7 text-sm text-gray-800">Email</label>
+              <input type="email" id="emailaddress" type="email" name="emailaddress" class="w-full bg-white rounded border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            </div>
+            <div class="relative mb-4">
+              <label for="number" class="leading-7 text-sm text-gray-800">Phone Number</label>
+              <input type="number" name="number" id="number"  class="w-full bg-white rounded border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            </div>
+            <div class="relative mb-4">
+              <label for="message" class="leading-7 text-sm text-gray-800">Message</label>
+              <textarea id="message" type="text" name="message"class="w-full bg-white rounded border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 h-32 text-base outline-none text-gray-900 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
+            </div>
+            <button type="submit" value="submit" name="submit" class="text-white bg-footerlink border-0 py-2 px-6 focus:outline-none hover:bg-primary rounded text-lg">Submit</button>
+            </form>
+            
+          </div>
+        </div>
+        </div>
+      </section>
+      
+      <!-- New footer  -->
+      <footer class="footer bg-secondfooter relative pt-1">
+        <div class="container px-5 lg:px-6  mx-auto">
+            <div class="sm:flex sm:mt-14 sm:mb-14">
+                <div class="  md:mt-0 mb-10 md:mb-0 sm:w-full   flex flex-col md:flex-row justify-between">
+                  <div class="flex flex-col text-gray-200 w-full md:w-1/3 pr-6  mt-4 md:mt-0  order-4 md:order-1 ">
+                    <!-- <span class="font-bold uppercase mt-4 md:mt-0 mb-2 text-lg">Spell SMS</span> -->
+                    <div class="flex">
+                    <img src="./images/logo.png" alt="company-logo" class=" w-16 h-16 mr-3 lg:mr-5">
+                    <div class="h-16 flex items-center">
+                      <h1 class=" text-primary text-xl sm:text-2xl lg:text-3xl font-body uppercase text">Spell <span class=" text-secondary font-body uppercase text-xl sm:text-2xl lg:text-3xl">SMS</span></h1>
+                    </div>
+                    
+                    </div>
+                    <p class="text-justify mt-2 mb-3 ">SPELL SMS is a leading Bulk SMS service provider in Nepal.Our reputation is built on technical expertise, industry experience, quality support and service reliability.</p>
+                    <h1 class="mb-2 text-xl text-secondary">Follow Us</h1>
+                    <div class=" flex ">
+                    <a href="https://www.facebook.com/spellsms/" target="_blank" class="w-8 h-8 border border-gray-300 rounded-full text-center py-1  text-gray-300 hover:text-white hover:bg-primary hover:border-primary mr-3">
+                      <i class="fab fa-facebook-f "></i>
+                    </a>
+                    <a href="" class="w-8 h-8 border border-gray-300 rounded-full text-center py-1 mr-3 text-gray-300 hover:text-white hover:bg-primary hover:border-primary">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="w-8 h-8 border border-gray-300 rounded-full text-center py-1 mr-3  text-gray-300 hover:bg-primary hover:border-primary">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+      
+                    <div class="text-gray-200 flex flex-col order-1  mt-10 mb-6 md:my-0 md:order-2 md:order-">
+                        <span class="font-bold  text-xl mb-2 text-secondary">Services</span>
+                        <span class="my-1"><a href="services.html" class=" text-md transform transition duration-300  hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i> Bulk SMS</a></span>
+                        <span class="my-1"><a href="services.html" class="text-md transform transition duration-300 hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i> Bulk MMS</a></span>
+                        <span class="my-1"><a href="services.html" class=" text-md  transform transition duration-300 hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i> SMS API</a></span>
+                        <span class="my-1"><a href="services.html" class="  text-md  transform transition duration-300 hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i> SMS Voting</a></span>
+                        <span class="my-1"><a href="services.html" class=" text-md  transform transition duration-300 hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i> SMS Short Codes</a></span>
+                    </div>
+                    
+                    <div class="flex flex-col text-gray-200 order-2  md:order-3 ">
+                        <span class="font-bold   md:mt-0 text-lg mb-2 text-secondary">Usefull links</span>
+                        <span class="my-1"><a href="#" class="text-md transform transition duration-300 hover:text-primary"><i class="fas fa-caret-right mr-2"></i>FAQ</a></span>
+                        <!-- <span class="my-1"><a href="#" class="text-md hover:text-primary">Blogs</a></span> -->
+                        <span class="my-1"><a href="#" class="text-md  transform transition duration-300 hover:text-primary"><i class="fas fa-caret-right mr-2"></i>API</a></span>
+                        <span class="my-1"><a href="about.html" class="text-md  transform transition duration-300 hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i>About us</a></span>
+                        <span class="my-1"><a href="/#contactSection" class="text-md  transform transition duration-300 hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i>Contact us</a></span>
+                    </div>
+                    <div class="flex flex-col text-gray-200 order-3  md:order-4 mt-6 mb-6 md:mt-0 md:mb-0">
+                      <div class=" md:text-right">
+                        <h1 class="font-bold  text-lg mb-2 text-secondary"> We accept (Fone-pay) </h1>
+                      </div>
+                        <div class=" md:flex md:justify-center mt-2">
+                          <img src="./images/fonepay.jpg" alt="" class="h-48 w-48 ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-5">
+            <div class=" border-t-2 border-gray-400 flex flex-col items-center">
+                <div class="sm:w-2/3 text-center py-6">
+                    <p class="text-sm text-gray-400 font-bold mb-1">
+                        ©2021 All rights reserved to spell sms.
+                    </p>
+                </div>
+            </div>
+        </div>
+      </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+      new WOW().init();
+      });
+      </script>
+    <script src="wow.min.js"></script>
+    <!-- loading -->
+    <script>
+      var preloader = document.getElementById('loading');
+      function myFunction(){
+          preloader.style.display = 'none';
+      }
+  </script>
+</body>
+</html>

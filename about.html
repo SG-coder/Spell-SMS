@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spell SMS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/2c928431b9.js"></script>
+    <script src="https://kit.fontawesome.com/c542f6ceea.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="//db.onlinewebfonts.com/c/41d92fd78c10238a92a7d24a74968f36?family=TESLA" rel="stylesheet" type="text/css"/>
+</head>
+<body onload="myFunction()">
+  <div id="loading" class=" w-screen h-screen bg-gray-800 fixed z-50 flex flex-col items-center justify-center">
+    <!-- <h1 class="text-gray-400 text-2xl">Spell SMS</h1> -->
+    <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_szlepvdh.json"  background="transparent"  speed="1.5"  style="width: 250px; height: 220px;"  loop  autoplay></lottie-player>
+    <!-- <h1 class="text-gray-400 text-2xl">Spell SMS</h1> -->
+  </div>
+  <nav class="bg-opacity-5 shadow-lg">
+    <div class="container  px-5 lg:px-6 mx-auto">
+      <div class="flex justify-between">
+        <div class="flex space-x-7">
+          <div>
+            <!-- Website Logo -->
+            <a href="index.html" class="flex items-center py-2 px-2">
+              <img src="./images/logo.png" alt="Logo" class=" w-12 sm:w-16 mr-6">
+              <h1 class=" text-primary text-2xl font-body uppercase">Spell <span class=" text-secondary text-2xl font-body uppercase">SMS</span></h1>
+            </a>
+          </div>
+          <!-- Primary Navbar items -->
+          <div class="hidden md:flex items-center space-x-1">
+            <!-- <a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</a>
+            <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Services</a>
+            <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</a>
+            <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact Us</a> -->
+          </div>
+        </div>
+        <!-- Secondary Navbar items -->
+        <div class="hidden lg:flex items-center space-x-4 ">
+          <!-- <a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Log In</a> -->
+          <a href="index.html" class="py-4 px-2  text-gray-600 font-semibold ">Home</a>
+          <a href="public/services.html" class="py-4 px-2  font-semibold hover:text-secondary transition duration-300 text-gray-600 ">Services</a>
+          <a href="reseller.html" class="py-4 px-2 text-gray-600 font-semibold hover:text-secondary transition duration-300">Reseller</a>
+          <a href="about.html" class="py-4 px-2 border-b-4 border-secondary text-secondary font-semibold hover:text-secondary transition duration-300">About</a>
+          <a href="/public/#contactSection" class="py-4 px-2 text-gray-600 font-semibold hover:text-secondary transition duration-300">Contact</a>
+          
+          <a href="https://login.spellsms.com/base/" class="py-2 px-6 font-medium text-white bg-blue-900 rounded hover:bg-blue-700 transition duration-300">Log In</a>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="lg:hidden flex items-center">
+          <button class="outline-none mobile-menu-button">
+          <svg class=" w-6 h-6 text-gray-500 hover:text-secondary "
+            x-show="!showMenu"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="hidden mobile-menu">
+      <ul class="">
+        <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text- hover:text-secondary">Home</a></li>
+        <li><a href="#services" class="block text-sm px-2 py-4 hover:text-secondary transition duration-300">Services</a></li>
+        <li><a href="#about" class="block text-sm px-2 py-4 hover:text-secondary transition duration-300">About</a></li>
+        <li><a href="#contactSection"  class="block text-sm px-2 py-4 hover:text-secondary transition duration-300">Contact Us</a></li>
+        <li class="active"><a href="https://login.spellsms.com/base/" class="block text-sm px-2 py-4 text- hover:bg-secondary font-semibold">login</a></li>
+      </ul>
+    </div>
+
+    <script>
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </nav>
+  <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" style="background-image: url(./images/banner01.jpg)">
+    <div class="flex justify-center">
+     <p class="text-3xl font-bold">About Us</p>
+     </div>  
+ </div>
+    <section class=" container  px-5 lg:px-6 py-14 mx-auto">
+        <div class="flex justify-start mb-5">
+            <h1 class="text-2xl text-secondary font-semibold font-heading">About Us</h1>
+        </div>
+        <div class=" flex flex-wrap">
+          <div class="w-full xl:w-2/3">
+            <p class="text-justify text-gray-800 ">SPELL SMS is a leading Bulk SMS service provider in Nepal. Our reputation is built on technical expertise, industry experience, quality support and service
+                reliability. SPELL SMS has In-House development team, dedicated towards developing the most user friendly and technically strong platform for the clients to
+                use. Also its dedicated support team is ready to handle customer queries 24x7 on mail or call to ensure customer receive the best possible support and service.
+                With a large list of our valuable clients from various fields we claim to provide the best possible communication medium so that clients save their efforts and
+                time and invest the same time in more productive areas.
+                SPELL SMS provides application-to-person (A2P) messaging services to large and small businesses, public benefit organizations and individuals. We were one of
+                the best commercial web-based messaging platforms, launched in 2020, and we now connect our customers to all over the country.
+                Spell SMS is the major product brand of <a class="text-secondary cursor-pointer" target="_blank" href='https://spellinnovation.com/'>SPELL INNOVATION</a> which is a pioneer Information Technology company.
+                We provide a standard platform to allow our clients to quickly deploy short and important messages using SMS communications. Our SMS platform allows for
+                SMS API integration, SMS campions, SMS voting, SMS information services, SMS campaigns and more. We offer several solutions for sending and receiving SMS
+                messages. Once registered on the Bulk SMS platform, a user has unrestricted access to all of them.</p>
+          </div>
+        <div class="hidden xl:block w-1/3">
+          <div class="flex justify-end">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fspellsms%2F&tabs=timeline&width=360&height=310&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="360" height="310" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          </div>
+        </div>
+        </div>
+    </section>
+  <!-- New footer  -->
+  <footer class="footer bg-secondfooter relative pt-1">
+    <div class="container  px-5 lg:px-6 mx-auto">
+        <div class="sm:flex sm:mt-14 sm:mb-14">
+            <div class="  md:mt-0 mb-10 md:mb-0 sm:w-full   flex flex-col md:flex-row justify-between">
+              <div class="flex flex-col text-gray-200 w-full md:w-1/3 pr-6  mt-4 md:mt-0  order-4 md:order-1 ">
+                <!-- <span class="font-bold uppercase mt-4 md:mt-0 mb-2 text-lg">Spell SMS</span> -->
+                <div class="flex">
+                <img src="./images/logo.png" alt="company-logo" class=" w-16 h-16 mr-3 lg:mr-5">
+                <div class="h-16 flex items-center">
+                  <h1 class=" text-primary text-xl sm:text-2xl lg:text-3xl font-body uppercase text">Spell <span class=" text-secondary font-body uppercase text-xl sm:text-2xl lg:text-3xl">SMS</span></h1>
+                </div>
+                
+                </div>
+        
+                <p class="text-justify mt-2 mb-3 ">SPELL SMS is a leading Bulk SMS service provider in Nepal.Our reputation is built on technical expertise, industry experience, quality support and service reliability.</p>
+                <h1 class="mb-2 text-xl text-secondary">Follow Us</h1>
+                <div class=" flex ">
+                <a href="https://www.facebook.com/spellsms/" target="_blank" class="w-8 h-8 border border-gray-300 rounded-full text-center py-1  text-gray-300 hover:text-white hover:bg-primary hover:border-primary mr-3">
+                  <i class="fab fa-facebook-f "></i>
+                </a>
+                <a href="" class="w-8 h-8 border border-gray-300 rounded-full text-center py-1 mr-3 text-gray-300 hover:text-white hover:bg-primary hover:border-primary">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="w-8 h-8 border border-gray-300 rounded-full text-center py-1 mr-3  text-gray-300 hover:bg-primary hover:border-primary">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+  
+                <div class="text-gray-200 flex flex-col order-1  mt-10 mb-6 md:my-0 md:order-2 md:order-">
+                    <span class="font-bold  text-xl mb-2 text-secondary">Services</span>
+                    <span class="my-1"><a href="services.html" class=" text-md transform transition duration-300  hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i> Bulk SMS</a></span>
+                    <span class="my-1"><a href="services.html" class="text-md transform transition duration-300 hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i> Bulk MMS</a></span>
+                    <span class="my-1"><a href="services.html" class=" text-md  transform transition duration-300 hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i> SMS API</a></span>
+                    <span class="my-1"><a href="services.html" class="  text-md  transform transition duration-300 hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i> SMS Voting</a></span>
+                    <span class="my-1"><a href="services.html" class=" text-md  transform transition duration-300 hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i> SMS Short Codes</a></span>
+                </div>
+                
+                <div class="flex flex-col text-gray-200 order-2  md:order-3 ">
+                    <span class="font-bold   md:mt-0 text-lg mb-2 text-secondary">Usefull links</span>
+                    <span class="my-1"><a href="#" class="text-md transform transition duration-300 hover:text-primary"><i class="fas fa-caret-right mr-2"></i>FAQ</a></span>
+                    <!-- <span class="my-1"><a href="#" class="text-md hover:text-primary">Blogs</a></span> -->
+                    <span class="my-1"><a href="#" class="text-md  transform transition duration-300 hover:text-primary"><i class="fas fa-caret-right mr-2"></i>API</a></span>
+                    <span class="my-1"><a href="about.html" class="text-md  transform transition duration-300 hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i>About us</a></span>
+                    <span class="my-1"><a href="/#contactSection" class="text-md  transform transition duration-300 hover:text-primary font-semibold"><i class="fas fa-caret-right mr-2"></i>Contact us</a></span>
+                </div>
+                <div class="flex flex-col text-gray-200 order-3  md:order-4 mt-6 mb-6 md:mt-0 md:mb-0">
+                  <div class=" md:text-right">
+                    <h1 class="font-bold  text-lg mb-2 text-secondary"> We accept (Fone-pay) </h1>
+                  </div>
+                    <div class=" md:flex md:justify-center mt-2">
+                      <img src="./images/fonepay.jpg" alt="" class="h-48 w-48 ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container px-5 lg:px-6 mx-auto ">
+        <div class=" border-t-2 border-gray-400 flex flex-col items-center">
+            <div class="sm:w-2/3 text-center py-6">
+                <p class="text-sm text-gray-400 font-bold mb-1">
+                    ©2021 All rights reserved to spell sms.
+                </p>
+            </div>
+        </div>
+    </div>
+  </footer>
+<!-- loading -->
+<script>
+  var preloader = document.getElementById('loading');
+  function myFunction(){
+      preloader.style.display = 'none';
+  }
+</script>
+</body>
+</html>

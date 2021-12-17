@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="myFunction()" style="background-image: url(./images/background.jpg)">
+    <div class="container  px-4 lg:px-6 mx-auto min-h-screen flex items-center justify-center ">
+        <div class="w-full md:w-2/3 lg:w-2/5 bg-gray-100 py-8 px-6  md:px-8  rounded-lg">
+            <div class="flex justify-center cursor-pointer mb-2" onclick="location.href='index.html'">
+                <img src="./images/logo.png" alt="logo" class="w-16 h-16">
+            </div>
+            <div class="mb-6">
+                <h3 class="text-2xl font-semibold text-center tracking-wide text-gray-700 font-heading">welcome back!</h3>
+            </div>
+            <form  action="https://login.spellsms.com/base/auth/authService" method="post">
+                <input type='text' placeholder="User Name" name="username" class="w-full mb-3 px-4 lg:px-6 py-3 border rounded-lg text-gray-700 focus:outline-none focus:border-tertiary focus:bg-white" required/>
+                <input type="password" placeholder="Password" id="password" name="password" 
+                    class="w-full mb-3 px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:border-tertiary lg:px-6" required />
+                <button class="text-white py-3 rounded-lg w-full font-bold text-xl tracking-wider "
+                style="background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(212,87,39,1) 0%, rgba(147,39,143,1) 100%);" >Log In</button>
+                <div class="flex justify-center my-4">
+                    <a class="text-tertiary text-sm" href="#">Forgot account?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+<!-- loading -->
+<script>
+    var preloader = document.getElementById('loading');
+    function myFunction(){
+    preloader.style.display = 'none';
+    }
+</script>
+</body>
+</html>
